@@ -28,32 +28,15 @@
                             <div class="panel-footer">
                                 <!-- Link to Update -->
                                 <!-- Link to Show  -->
+                                <a th:href="@{/blogposts/new}">
+                                    <button class="btn btn-primary">Submit a New Blog Post</button>
+                                </a>
                                 <!--  Link to Destroy -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <p>Please use the form below to submit the Blog Post.</p>
-            <form action="#" th:action="@{/}" th:object="${blogPost}" method="post">
-                <table>
-                    <tr>
-                        <td>Title</td>
-                        <td><input type="text" th:field="*{title}" /></td>
-                    </tr>
-                    <tr>
-                        <td>Author:</td>
-                        <td><input type="text" th:field="*{author}" /></td>
-                    </tr>
-                    <tr>
-                        <td>Blog Entry:</td>
-                        <td><input type="text" th:field="*{blogEntry}" /></td>
-                    </tr>
-                    <tr>
-                        <td><button type="submit">Submit Your Post</button></td>
-                    </tr>
-                </table>
-            </form>
         </div>
     </body>
 

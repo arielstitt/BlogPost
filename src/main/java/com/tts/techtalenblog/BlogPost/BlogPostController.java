@@ -22,7 +22,12 @@ public class BlogPostController {
         return "blogpost/index";
     }
 
-    @PostMapping("/")
+    @GetMapping(value = "/blogposts/new")
+    public String newBlog(BlogPost blogPost) {
+        return "blogpost/new";
+    }
+
+    @PostMapping("/blogposts")
     public String addNewBlogPost(BlogPost blogPost, Model model) {
         blogPostRepository.save(blogPost);
         posts.add(blogPost);

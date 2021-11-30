@@ -21,7 +21,7 @@ public class BlogPostController {
         model.addAttribute("posts", posts);
         return "blogpost/index";
     }
-
+    
     @GetMapping(value = "/blogposts/new")
     public String newBlog(BlogPost blogPost) {
         return "blogpost/new";
